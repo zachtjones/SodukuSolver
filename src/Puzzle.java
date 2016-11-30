@@ -3,19 +3,24 @@ import javafx.beans.Observable;
 
 public class Puzzle implements Observable {
 	
-	/*
-	Use backtracking to solve the puzzle.
-		*/
+	private byte[][] grid;
+	private InvalidationListener view;
 	
 	public Puzzle(){
-		
+		this.grid = new byte[9][9];
 	}
 	
 	/**
 	 * Clears this puzzle.
 	 */
 	public void clear(){
-		//TODO
+		//set all values to 0
+		for(int i = 0; i < 9; i++){
+			for(int j = 0; j < 9; j++){
+				this.grid[i][j] = 0;
+			}
+		}
+		changedState();
 	}
 	
 	/**
@@ -29,29 +34,43 @@ public class Puzzle implements Observable {
 	
 	/**
 	 * Sets the value of the puzzle at the location. 
-	 * A return value indicates whether this was a valid move.
 	 * @param row An int that is the row of the puzzle to set.
 	 * @param col An int that is the column of the puzzle to set.
 	 * @param value The value to set at row, column.
 	 * A value of 0 means blank, 1-9 are the allowed values.
-	 * @return True iff the value is allowed.
-	 * A false of false means that the puzzle was not changed.
 	 */
-	public boolean setValue(int row, int col, int value){
-		//TODO
-		return false;
+	public void setValue(int row, int col, byte value){
+		//set the value at row, column
+		this.grid[row][col] = value;
+		changedState();
+	}
+	
+	/**
+	 * Gets the value of the puzzle at the location. 
+	 * @param row An int that is the row of the puzzle to set.
+	 * @param col An int that is the column of the puzzle to set.
+	 * @return A value of 0 means blank, 1-9 are digits.
+	 */
+	public byte getValue(int row, int col){
+		return this.grid[row][col];
 	}
 
 	@Override
 	public void addListener(InvalidationListener listener) {
-		// TODO Auto-generated method stub
-		
+		this.view = listener;
 	}
 
 	@Override
 	public void removeListener(InvalidationListener listener) {
-		// TODO Auto-generated method stub
-		
+		this.view = null;
 	}
+	
+	/**
+	 * Call when the view should be updated to reflect the changes to this.
+	 */
+	private void changedState(){
+		this.view.invalidated(this);
+	}
+	
 
 }

@@ -5,6 +5,7 @@ import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -34,6 +35,7 @@ public class SodukuSolver extends Application implements InvalidationListener {
 		ap.setPrefSize(500, 550);
 		c = new Canvas(500, 500);
 		c.setLayoutY(50);
+		c.setOnMouseClicked(event -> this.clicked(event));
 		ap.getChildren().add(c);
 		
 		//clear button
@@ -59,6 +61,7 @@ public class SodukuSolver extends Application implements InvalidationListener {
 			ap.getChildren().remove(c);
 			c = new Canvas(ap.getWidth(), c.getHeight());
 			c.setLayoutY(50);
+			c.setOnMouseClicked(event -> this.clicked(event));
 			ap.getChildren().add(c);
 			invalidated(p);
 		});
@@ -66,6 +69,7 @@ public class SodukuSolver extends Application implements InvalidationListener {
 			ap.getChildren().remove(c);
 			c = new Canvas(c.getWidth(), ap.getHeight() - 50);
 			c.setLayoutY(50);
+			c.setOnMouseClicked(event -> this.clicked(event));
 			ap.getChildren().add(c);
 			invalidated(p);
 		});
@@ -92,26 +96,26 @@ public class SodukuSolver extends Application implements InvalidationListener {
 			case Q:selectedRow = 7;break;
 			case R:selectedRow = 8;break;
 			//numbers
-			case DIGIT0:p.setValue(selectedRow, selectedCol, 0);break;
-			case DIGIT1:p.setValue(selectedRow, selectedCol, 1);break;
-			case DIGIT2:p.setValue(selectedRow, selectedCol, 2);break;
-			case DIGIT3:p.setValue(selectedRow, selectedCol, 3);break;
-			case DIGIT4:p.setValue(selectedRow, selectedCol, 4);break;
-			case DIGIT5:p.setValue(selectedRow, selectedCol, 5);break;
-			case DIGIT6:p.setValue(selectedRow, selectedCol, 6);break;
-			case DIGIT7:p.setValue(selectedRow, selectedCol, 7);break;
-			case DIGIT8:p.setValue(selectedRow, selectedCol, 8);break;
-			case DIGIT9:p.setValue(selectedRow, selectedCol, 9);break;
-			case NUMPAD0:p.setValue(selectedRow, selectedCol, 0);break;
-			case NUMPAD1:p.setValue(selectedRow, selectedCol, 1);break;
-			case NUMPAD2:p.setValue(selectedRow, selectedCol, 2);break;
-			case NUMPAD3:p.setValue(selectedRow, selectedCol, 3);break;
-			case NUMPAD4:p.setValue(selectedRow, selectedCol, 4);break;
-			case NUMPAD5:p.setValue(selectedRow, selectedCol, 5);break;
-			case NUMPAD6:p.setValue(selectedRow, selectedCol, 6);break;
-			case NUMPAD7:p.setValue(selectedRow, selectedCol, 7);break;
-			case NUMPAD8:p.setValue(selectedRow, selectedCol, 8);break;
-			case NUMPAD9:p.setValue(selectedRow, selectedCol, 9);break;
+			case DIGIT0:p.setValue(selectedRow, selectedCol, (byte) 0);break;
+			case DIGIT1:p.setValue(selectedRow, selectedCol, (byte) 1);break;
+			case DIGIT2:p.setValue(selectedRow, selectedCol, (byte) 2);break;
+			case DIGIT3:p.setValue(selectedRow, selectedCol, (byte) 3);break;
+			case DIGIT4:p.setValue(selectedRow, selectedCol, (byte) 4);break;
+			case DIGIT5:p.setValue(selectedRow, selectedCol, (byte) 5);break;
+			case DIGIT6:p.setValue(selectedRow, selectedCol, (byte) 6);break;
+			case DIGIT7:p.setValue(selectedRow, selectedCol, (byte) 7);break;
+			case DIGIT8:p.setValue(selectedRow, selectedCol, (byte) 8);break;
+			case DIGIT9:p.setValue(selectedRow, selectedCol, (byte) 9);break;
+			case NUMPAD0:p.setValue(selectedRow, selectedCol, (byte) 0);break;
+			case NUMPAD1:p.setValue(selectedRow, selectedCol, (byte) 1);break;
+			case NUMPAD2:p.setValue(selectedRow, selectedCol, (byte) 2);break;
+			case NUMPAD3:p.setValue(selectedRow, selectedCol, (byte) 3);break;
+			case NUMPAD4:p.setValue(selectedRow, selectedCol, (byte) 4);break;
+			case NUMPAD5:p.setValue(selectedRow, selectedCol, (byte) 5);break;
+			case NUMPAD6:p.setValue(selectedRow, selectedCol, (byte) 6);break;
+			case NUMPAD7:p.setValue(selectedRow, selectedCol, (byte) 7);break;
+			case NUMPAD8:p.setValue(selectedRow, selectedCol, (byte) 8);break;
+			case NUMPAD9:p.setValue(selectedRow, selectedCol, (byte) 9);break;
 			default:break;//don't need to do anything
 			}
 			invalidated(p);
@@ -123,7 +127,20 @@ public class SodukuSolver extends Application implements InvalidationListener {
 		primaryStage.show();
 	}
 
-
+	/**
+	 * Call when the canvas is clicked.
+	 * @param event The MouseEvent. 
+	 * This must not be null and must originate from the canvas.
+	 */
+	private void clicked(MouseEvent event){
+		//move the selection
+		int col = (int)(event.getX() / (c.getWidth() * 0.1)) - 1;
+		int row = (int)(event.getY() / (c.getHeight() * 0.1)) - 1;
+		if(col < 0 || row < 0){ return; }
+		this.selectedCol = col;
+		this.selectedRow = row;
+		invalidated(p);
+	}
 
 	@Override
 	public void invalidated(Observable observable) {
@@ -158,10 +175,20 @@ public class SodukuSolver extends Application implements InvalidationListener {
 			char c = (char) (65 + i);
 			gc.strokeText("" + c, (i+1)*colWidth + 5, 35);
 		}
+		
 		//draw the left letters
 		for(int i = 0; i < 9; i++){
 			char c = (char)(74 + i);
 			gc.strokeText("" + c, 25, (i+1)*rowHeight + 25);
+		}
+		
+		//draw the numbers
+		for(int i = 0; i < 9; i++){
+			for(int j = 0; j < 9; j++){
+				byte value = p.getValue(i, j);
+				if(value == 0){ continue; }
+				gc.strokeText(Byte.toString(value), (j+1)*colWidth + 15, (i + 1)*rowHeight + 30);
+			}
 		}
 	}
 
