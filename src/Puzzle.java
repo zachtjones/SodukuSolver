@@ -3,7 +3,9 @@ import javafx.beans.Observable;
 
 public class Puzzle implements Observable {
 	
-	private byte[][] grid;
+	/** Represents the number in row, column */
+	byte[][] grid;
+	/** Holds the listener for changes to this observable */
 	private InvalidationListener view;
 	
 	public Puzzle(){
@@ -28,8 +30,14 @@ public class Puzzle implements Observable {
 	 * @return True if the puzzle was solved, false if there is no solution.
 	 */
 	public boolean solve(){
-		//TODO
-		return false;
+		Configuration solution = Backtracker.solve(new PuzzleConfig(this));
+		if(solution == null){
+			return false;
+		}
+		PuzzleConfig s = (PuzzleConfig)solution;
+		this.grid = s.getGrid(); //set this to the reference, don't need to copy
+		changedState();
+		return true;
 	}
 	
 	/**
