@@ -4,7 +4,10 @@ import javafx.beans.Observable;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
@@ -53,6 +56,14 @@ public class SodukuSolver extends Application implements InvalidationListener {
 		solve.setLayoutX(110);
 		solve.setLayoutY(5);
 		solve.setPrefSize(100, 30);
+		solve.setOnAction(event ->{
+			if(!p.solve()){
+				Alert a = new Alert(AlertType.ERROR, 
+						"Could not find a solution to the puzzle.", new ButtonType("OK"));
+				a.setTitle("Error");
+				a.showAndWait();
+			}
+		});
 		ap.getChildren().add(solve);
 		
 		Scene scene = new Scene(ap);

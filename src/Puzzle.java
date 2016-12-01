@@ -30,7 +30,9 @@ public class Puzzle implements Observable {
 	 * @return True if the puzzle was solved, false if there is no solution.
 	 */
 	public boolean solve(){
-		Configuration solution = Backtracker.solve(new PuzzleConfig(this));
+		
+		PuzzleConfig p = new PuzzleConfig(this);
+		Configuration solution = Backtracker.solve(p);
 		if(solution == null){
 			return false;
 		}

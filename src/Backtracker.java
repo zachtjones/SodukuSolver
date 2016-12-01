@@ -8,7 +8,6 @@ public class Backtracker {
 	 * if there is no solution
 	 */
 	public static Configuration solve(Configuration c){
-		
 		if(c.isGoal()){
 			return c; //done, found the solution
 		} else {
