@@ -12,16 +12,16 @@
 		6FDF0E8D23C76D9300764A9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FDF0E8C23C76D9300764A9B /* Assets.xcassets */; };
 		6FDF0E9023C76D9300764A9B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FDF0E8F23C76D9300764A9B /* Preview Assets.xcassets */; };
 		6FDF0E9323C76D9300764A9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FDF0E9123C76D9300764A9B /* LaunchScreen.storyboard */; };
-		6FDF0E9E23C76DAB00764A9B /* Comparer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF0E9B23C76DAA00764A9B /* Comparer.swift */; };
-		6FDF0E9F23C76DAB00764A9B /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF0E9C23C76DAA00764A9B /* Parser.swift */; };
-		6FDF0EA023C76DAB00764A9B /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF0E9D23C76DAA00764A9B /* Numbers.swift */; };
-		6FDF0EA523C76DB600764A9B /* PuzzleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF0EA223C76DB600764A9B /* PuzzleConfig.swift */; };
-		6FDF0EA623C76DB600764A9B /* Backtracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF0EA323C76DB600764A9B /* Backtracker.swift */; };
-		6FDF0EA723C76DB600764A9B /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF0EA423C76DB600764A9B /* Configuration.swift */; };
-		6FDF0EAC23C76DC100764A9B /* Puzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF0EA923C76DC100764A9B /* Puzzle.swift */; };
-		6FDF0EAD23C76DC100764A9B /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF0EAA23C76DC100764A9B /* Cell.swift */; };
-		6FDF0EAE23C76DC100764A9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF0EAB23C76DC100764A9B /* ContentView.swift */; };
-		6FDF0EB023C76DCD00764A9B /* Listener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF0EAF23C76DCD00764A9B /* Listener.swift */; };
+		6FDF0EB523C770DA00764A9B /* Puzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF0EB223C770DA00764A9B /* Puzzle.swift */; };
+		6FDF0EB623C770DA00764A9B /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF0EB323C770DA00764A9B /* Cell.swift */; };
+		6FDF0EB723C770DA00764A9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF0EB423C770DA00764A9B /* ContentView.swift */; };
+		6FDF0EBC23C770EA00764A9B /* Comparer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF0EB923C770EA00764A9B /* Comparer.swift */; };
+		6FDF0EBD23C770EA00764A9B /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF0EBA23C770EA00764A9B /* Parser.swift */; };
+		6FDF0EBE23C770EA00764A9B /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF0EBB23C770EA00764A9B /* Numbers.swift */; };
+		6FDF0EC023C7710100764A9B /* Listener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF0EBF23C7710100764A9B /* Listener.swift */; };
+		6FDF0EC523C7711000764A9B /* PuzzleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF0EC223C7711000764A9B /* PuzzleConfig.swift */; };
+		6FDF0EC623C7711000764A9B /* Backtracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF0EC323C7711000764A9B /* Backtracker.swift */; };
+		6FDF0EC723C7711000764A9B /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF0EC423C7711000764A9B /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,16 +32,16 @@
 		6FDF0E8F23C76D9300764A9B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6FDF0E9223C76D9300764A9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6FDF0E9423C76D9300764A9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6FDF0E9B23C76DAA00764A9B /* Comparer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comparer.swift; sourceTree = "<group>"; };
-		6FDF0E9C23C76DAA00764A9B /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		6FDF0E9D23C76DAA00764A9B /* Numbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
-		6FDF0EA223C76DB600764A9B /* PuzzleConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleConfig.swift; sourceTree = "<group>"; };
-		6FDF0EA323C76DB600764A9B /* Backtracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Backtracker.swift; sourceTree = "<group>"; };
-		6FDF0EA423C76DB600764A9B /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		6FDF0EA923C76DC100764A9B /* Puzzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Puzzle.swift; sourceTree = "<group>"; };
-		6FDF0EAA23C76DC100764A9B /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
-		6FDF0EAB23C76DC100764A9B /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		6FDF0EAF23C76DCD00764A9B /* Listener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Listener.swift; path = ../../../files/Listener.swift; sourceTree = "<group>"; };
+		6FDF0EB223C770DA00764A9B /* Puzzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Puzzle.swift; sourceTree = "<group>"; };
+		6FDF0EB323C770DA00764A9B /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		6FDF0EB423C770DA00764A9B /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6FDF0EB923C770EA00764A9B /* Comparer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comparer.swift; sourceTree = "<group>"; };
+		6FDF0EBA23C770EA00764A9B /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		6FDF0EBB23C770EA00764A9B /* Numbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
+		6FDF0EBF23C7710100764A9B /* Listener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Listener.swift; sourceTree = "<group>"; };
+		6FDF0EC223C7711000764A9B /* PuzzleConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleConfig.swift; sourceTree = "<group>"; };
+		6FDF0EC323C7711000764A9B /* Backtracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Backtracker.swift; sourceTree = "<group>"; };
+		6FDF0EC423C7711000764A9B /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,10 +74,10 @@
 		6FDF0E8523C76D9200764A9B /* SudokuSolver */ = {
 			isa = PBXGroup;
 			children = (
-				6FDF0EAF23C76DCD00764A9B /* Listener.swift */,
-				6FDF0EA823C76DC100764A9B /* Views */,
-				6FDF0E9A23C76DAA00764A9B /* ImageParser */,
-				6FDF0EA123C76DB600764A9B /* Solver */,
+				6FDF0EBF23C7710100764A9B /* Listener.swift */,
+				6FDF0EB823C770EA00764A9B /* ImageParser */,
+				6FDF0EC123C7711000764A9B /* Solver */,
+				6FDF0EB123C770DA00764A9B /* Views */,
 				6FDF0E8623C76D9200764A9B /* AppDelegate.swift */,
 				6FDF0E8823C76D9200764A9B /* SceneDelegate.swift */,
 				6FDF0E8C23C76D9300764A9B /* Assets.xcassets */,
@@ -96,37 +96,34 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		6FDF0E9A23C76DAA00764A9B /* ImageParser */ = {
+		6FDF0EB123C770DA00764A9B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6FDF0E9B23C76DAA00764A9B /* Comparer.swift */,
-				6FDF0E9C23C76DAA00764A9B /* Parser.swift */,
-				6FDF0E9D23C76DAA00764A9B /* Numbers.swift */,
+				6FDF0EB223C770DA00764A9B /* Puzzle.swift */,
+				6FDF0EB323C770DA00764A9B /* Cell.swift */,
+				6FDF0EB423C770DA00764A9B /* ContentView.swift */,
 			);
-			name = ImageParser;
-			path = ../../../files/ImageParser;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		6FDF0EA123C76DB600764A9B /* Solver */ = {
+		6FDF0EB823C770EA00764A9B /* ImageParser */ = {
 			isa = PBXGroup;
 			children = (
-				6FDF0EA223C76DB600764A9B /* PuzzleConfig.swift */,
-				6FDF0EA323C76DB600764A9B /* Backtracker.swift */,
-				6FDF0EA423C76DB600764A9B /* Configuration.swift */,
+				6FDF0EB923C770EA00764A9B /* Comparer.swift */,
+				6FDF0EBA23C770EA00764A9B /* Parser.swift */,
+				6FDF0EBB23C770EA00764A9B /* Numbers.swift */,
 			);
-			name = Solver;
-			path = ../../../files/Solver;
+			path = ImageParser;
 			sourceTree = "<group>";
 		};
-		6FDF0EA823C76DC100764A9B /* Views */ = {
+		6FDF0EC123C7711000764A9B /* Solver */ = {
 			isa = PBXGroup;
 			children = (
-				6FDF0EA923C76DC100764A9B /* Puzzle.swift */,
-				6FDF0EAA23C76DC100764A9B /* Cell.swift */,
-				6FDF0EAB23C76DC100764A9B /* ContentView.swift */,
+				6FDF0EC223C7711000764A9B /* PuzzleConfig.swift */,
+				6FDF0EC323C7711000764A9B /* Backtracker.swift */,
+				6FDF0EC423C7711000764A9B /* Configuration.swift */,
 			);
-			name = Views;
-			path = ../../../files/Views;
+			path = Solver;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,17 +198,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FDF0E8723C76D9200764A9B /* AppDelegate.swift in Sources */,
-				6FDF0EA623C76DB600764A9B /* Backtracker.swift in Sources */,
-				6FDF0EB023C76DCD00764A9B /* Listener.swift in Sources */,
-				6FDF0EAE23C76DC100764A9B /* ContentView.swift in Sources */,
+				6FDF0EBD23C770EA00764A9B /* Parser.swift in Sources */,
+				6FDF0EB723C770DA00764A9B /* ContentView.swift in Sources */,
+				6FDF0EC623C7711000764A9B /* Backtracker.swift in Sources */,
+				6FDF0EBC23C770EA00764A9B /* Comparer.swift in Sources */,
 				6FDF0E8923C76D9200764A9B /* SceneDelegate.swift in Sources */,
-				6FDF0EA723C76DB600764A9B /* Configuration.swift in Sources */,
-				6FDF0EA523C76DB600764A9B /* PuzzleConfig.swift in Sources */,
-				6FDF0EAC23C76DC100764A9B /* Puzzle.swift in Sources */,
-				6FDF0EA023C76DAB00764A9B /* Numbers.swift in Sources */,
-				6FDF0E9F23C76DAB00764A9B /* Parser.swift in Sources */,
-				6FDF0EAD23C76DC100764A9B /* Cell.swift in Sources */,
-				6FDF0E9E23C76DAB00764A9B /* Comparer.swift in Sources */,
+				6FDF0EC723C7711000764A9B /* Configuration.swift in Sources */,
+				6FDF0EC023C7710100764A9B /* Listener.swift in Sources */,
+				6FDF0EBE23C770EA00764A9B /* Numbers.swift in Sources */,
+				6FDF0EC523C7711000764A9B /* PuzzleConfig.swift in Sources */,
+				6FDF0EB523C770DA00764A9B /* Puzzle.swift in Sources */,
+				6FDF0EB623C770DA00764A9B /* Cell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
