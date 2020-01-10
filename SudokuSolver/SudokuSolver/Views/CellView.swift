@@ -12,7 +12,7 @@ private let cellSize: CGFloat = 25
 
 struct CellView: View {
 	var bgColor: Color
-	var cellRef: PuzzleCell = PuzzleCell(value: 3)
+	var cellRef: PuzzleCell
     var body: some View {
 		ZStack {
 			Rectangle()
@@ -27,6 +27,6 @@ struct CellView: View {
 
 struct CellView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+		ContentView(puzzle: Puzzle())
     }
 }

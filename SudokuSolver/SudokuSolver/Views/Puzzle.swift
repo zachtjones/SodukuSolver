@@ -25,6 +25,16 @@ public class Puzzle {
 	public init(){
 		// 9x9 initially empty
 		self.grid = Array(repeating: Array(repeating: PuzzleCell(value: 0), count: 9), count: 9);
+		for i in 0..<9 {
+			for j in 0..<9 {
+				self.grid[i][j] = PuzzleCell(value: 0)
+			}
+		}
+		
+		// TODO remove the following lines once the image loading works.
+		self[0,0] = 2
+		self[0,1] = 4
+		self.grid[0][2].value = 6
 	}
 	
 	/**
@@ -37,6 +47,11 @@ public class Puzzle {
 				self.grid[i][j].value = 0;
 			}
 		}
+	}
+	
+	/*** Gets the cell at the sepecific major row, major column, inner row, inner column */
+	func getCell(row: Int, col: Int, r: Int, c: Int) -> PuzzleCell {
+		return self.grid[row * 3 + r][col * 3 + c]
 	}
 	
 	/**

@@ -13,6 +13,7 @@ let backgroundColor = Color(red: 0.92, green: 0.92, blue: 0.92)
 let darkBackgroundColor = Color(red: 0.85, green: 0.85, blue: 0.85)
 
 struct ContentView: View {
+	var puzzle: Puzzle
     var body: some View {
 		VStack {
 			HStack {
@@ -37,7 +38,7 @@ struct ContentView: View {
 			HStack {
 				Spacer()
 					.frame(width: borderWidth)
-				PuzzleView()
+				PuzzleView(puzzle: self.puzzle)
 				Spacer()
 					.frame(width: borderWidth)
 			}
@@ -49,6 +50,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+		ContentView(puzzle: Puzzle())
     }
 }

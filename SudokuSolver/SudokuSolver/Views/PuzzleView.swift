@@ -9,12 +9,13 @@
 import SwiftUI
 
 struct PuzzleView: View {
+	let puzzle: Puzzle
     var body: some View {
 		VStack(spacing: 0) {
-			ForEach(1...3, id: \.self) {i in
+			ForEach(0..<3, id: \.self) {i in
 				HStack(spacing: 0) {
-					ForEach(1...3, id: \.self) {j in
-						InnerPuzzleView(bgColor: (i+j)%2==0 ? darkBackgroundColor : backgroundColor)
+					ForEach(0..<3, id: \.self) {j in
+						InnerPuzzleView(puzzle: self.puzzle, row: i, col: j, bgColor: (i+j)%2==0 ? darkBackgroundColor : backgroundColor)
 					}
 				}
 			}
@@ -25,13 +26,16 @@ struct PuzzleView: View {
 }
 
 struct InnerPuzzleView: View {
-	var bgColor: Color
+	let puzzle: Puzzle
+	let row: Int
+	let col: Int
+	let bgColor: Color
 	var body: some View {
 		VStack(spacing: 0) {
-			ForEach(1...3, id: \.self) {_ in
+			ForEach(0..<3, id: \.self) {i in
 				HStack(spacing: 0) {
-					ForEach(1...3, id: \.self) {_ in
-						CellView(bgColor: self.bgColor)
+					ForEach(0..<3, id: \.self) {j in
+						CellView(bgColor: self.bgColor, cellRef: self.puzzle.getCell(row: self.row, col: self.col, r: i, c: j))
 					}
 				}
 			}
@@ -43,6 +47,6 @@ struct InnerPuzzleView: View {
 
 struct PuzzleView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+		ContentView(puzzle: Puzzle())
     }
 }
