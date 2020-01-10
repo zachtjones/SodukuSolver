@@ -17,7 +17,8 @@ public class PuzzleConfig : Configuration {
 	* Constructor from a Puzzle object
 	*/
 	public init(p: Puzzle){
-		self.grid = p.getGrid();
+		self.grid = Array(repeating: Array(repeating: 0, count: 9), count: 9)
+		// TODO grab the values of the puzzle's grid to fill in all values here
 		self.cursorRow = 0;
 		self.cursorCol = -1;
 		//create a separate grid, don't want a reference

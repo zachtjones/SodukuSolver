@@ -12,10 +12,16 @@ private let cellSize: CGFloat = 25
 
 struct CellView: View {
 	var bgColor: Color
+	var cellRef: PuzzleCell = PuzzleCell(value: 3)
     var body: some View {
-		Rectangle()
-		.fill(bgColor)
-		.border(Color.blue, width: 1)
+		ZStack {
+			Rectangle()
+				.fill(bgColor)
+				.border(Color.blue, width: 1)
+			if (cellRef.value != 0) {
+				Text("\(cellRef.value)")
+			}
+		}
     }
 }
 
