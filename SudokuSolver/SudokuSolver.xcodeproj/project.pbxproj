@@ -22,6 +22,8 @@
 		6FDF0EC523C7711000764A9B /* PuzzleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF0EC223C7711000764A9B /* PuzzleConfig.swift */; };
 		6FDF0EC623C7711000764A9B /* Backtracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF0EC323C7711000764A9B /* Backtracker.swift */; };
 		6FDF0EC723C7711000764A9B /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF0EC423C7711000764A9B /* Configuration.swift */; };
+		6FDF0EC923C83EBD00764A9B /* PuzzleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF0EC823C83EBD00764A9B /* PuzzleView.swift */; };
+		6FDF0ECB23C83FF700764A9B /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FDF0ECA23C83FF700764A9B /* CellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		6FDF0EC223C7711000764A9B /* PuzzleConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PuzzleConfig.swift; sourceTree = "<group>"; };
 		6FDF0EC323C7711000764A9B /* Backtracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Backtracker.swift; sourceTree = "<group>"; };
 		6FDF0EC423C7711000764A9B /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		6FDF0EC823C83EBD00764A9B /* PuzzleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuzzleView.swift; sourceTree = "<group>"; };
+		6FDF0ECA23C83FF700764A9B /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				6FDF0EB223C770DA00764A9B /* Puzzle.swift */,
 				6FDF0EB323C770DA00764A9B /* Cell.swift */,
 				6FDF0EB423C770DA00764A9B /* ContentView.swift */,
+				6FDF0EC823C83EBD00764A9B /* PuzzleView.swift */,
+				6FDF0ECA23C83FF700764A9B /* CellView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -197,11 +203,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FDF0EC923C83EBD00764A9B /* PuzzleView.swift in Sources */,
 				6FDF0E8723C76D9200764A9B /* AppDelegate.swift in Sources */,
 				6FDF0EBD23C770EA00764A9B /* Parser.swift in Sources */,
 				6FDF0EB723C770DA00764A9B /* ContentView.swift in Sources */,
 				6FDF0EC623C7711000764A9B /* Backtracker.swift in Sources */,
 				6FDF0EBC23C770EA00764A9B /* Comparer.swift in Sources */,
+				6FDF0ECB23C83FF700764A9B /* CellView.swift in Sources */,
 				6FDF0E8923C76D9200764A9B /* SceneDelegate.swift in Sources */,
 				6FDF0EC723C7711000764A9B /* Configuration.swift in Sources */,
 				6FDF0EC023C7710100764A9B /* Listener.swift in Sources */,

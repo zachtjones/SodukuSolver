@@ -34,7 +34,11 @@ struct ContentView: View {
 			Spacer()
 				.frame(height: borderWidth*2)
 			HStack {
-				Text("line2")
+				Spacer()
+					.frame(width: borderWidth)
+				PuzzleView()
+				Spacer()
+					.frame(width: borderWidth)
 			}
 			Spacer()
 		}
