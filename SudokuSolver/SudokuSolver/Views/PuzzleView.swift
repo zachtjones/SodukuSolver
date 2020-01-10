@@ -11,10 +11,10 @@ import SwiftUI
 struct PuzzleView: View {
     var body: some View {
 		VStack(spacing: 0) {
-			ForEach(1...3, id: \.self) {_ in
+			ForEach(1...3, id: \.self) {i in
 				HStack(spacing: 0) {
-					ForEach(1...3, id: \.self) {_ in
-						InnerPuzzleView()
+					ForEach(1...3, id: \.self) {j in
+						InnerPuzzleView(bgColor: (i+j)%2==0 ? darkBackgroundColor : backgroundColor)
 					}
 				}
 			}
@@ -25,17 +25,19 @@ struct PuzzleView: View {
 }
 
 struct InnerPuzzleView: View {
+	var bgColor: Color
 	var body: some View {
 		VStack(spacing: 0) {
 			ForEach(1...3, id: \.self) {_ in
 				HStack(spacing: 0) {
 					ForEach(1...3, id: \.self) {_ in
-						CellView()
+						CellView(bgColor: self.bgColor)
 					}
 				}
 			}
 		}
 		.border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 1.5)
+		.background(bgColor)
 	}
 }
 

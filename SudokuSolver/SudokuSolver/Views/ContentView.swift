@@ -10,6 +10,7 @@ import SwiftUI
 
 let borderWidth: CGFloat = 15.0
 let backgroundColor = Color(red: 0.92, green: 0.92, blue: 0.92)
+let darkBackgroundColor = Color(red: 0.85, green: 0.85, blue: 0.85)
 
 struct ContentView: View {
     var body: some View {

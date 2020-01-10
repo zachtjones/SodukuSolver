@@ -11,9 +11,10 @@ import SwiftUI
 private let cellSize: CGFloat = 25
 
 struct CellView: View {
+	var bgColor: Color
     var body: some View {
 		Rectangle()
-		.fill(Color.white)
+		.fill(bgColor)
 		.border(Color.blue, width: 1)
     }
 }
